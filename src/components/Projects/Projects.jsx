@@ -1,8 +1,8 @@
 import { Container, Grid } from "@mui/material";
 import React from "react";
-
 import { motion } from "framer-motion";
 import ProjectCard from "../Project/ProjectCard";
+import projects from "../../data";
 
 const Projects = () => {
   return (
@@ -18,18 +18,13 @@ const Projects = () => {
           marginTop={"4rem"}
           sx={{ justifyContent: { xxs: "center", xs: "center", md: "start" } }}
         >
-          <Grid item md={4}>
-            <ProjectCard />
-          </Grid>
-          <Grid item md={4}>
-            <ProjectCard />
-          </Grid>
-          <Grid item md={4}>
-            <ProjectCard />
-          </Grid>
-          <Grid item md={4}>
-            <ProjectCard />
-          </Grid>
+          {projects.map((prj, index) => {
+            return (
+              <Grid item md={4} key={index}>
+                <ProjectCard project={prj} />
+              </Grid>
+            );
+          })}
         </Grid>
       </motion.div>
     </Container>

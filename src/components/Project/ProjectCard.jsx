@@ -1,10 +1,8 @@
-import { Card, CardContent, CardMedia, Typography } from "@mui/material";
-import dummy from "../../img/dummy.jpg";
+import { Card, CardContent, CardMedia, Link, Typography } from "@mui/material";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { maxWidth } from "@mui/system";
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }) => {
   const [showContent, setShowContent] = useState(false);
   const [leavedCardOnce, setLeavedCardOnce] = useState(false);
   const [timeOutID, setTimeoutID] = useState(0);
@@ -43,9 +41,8 @@ const ProjectCard = () => {
       >
         <CardMedia
           component="img"
-          image={dummy}
+          image={project?.screenshot}
           alt="green iguana"
-          className="card-animation"
           height={"100%"}
         />
       </motion.div>
@@ -58,12 +55,31 @@ const ProjectCard = () => {
           >
             <CardContent sx={{ height: 200 }}>
               <Typography gutterBottom variant="h5" component="div">
-                Lizard
+                {project?.title}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                {project?.description}
               </Typography>
+              <Link
+                href={project?.live}
+                target={"_blank"}
+                rel="noopener"
+                display={"block"}
+                underline="hover"
+                sx={{ cursor: "grabbing" }}
+              >
+                Ir al live!
+              </Link>
+              <Link
+                href={project?.repo}
+                target={"_blank"}
+                rel="noopener"
+                display={"block"}
+                underline="hover"
+                sx={{ cursor: "grabbing" }}
+              >
+                Github Repo
+              </Link>
             </CardContent>
           </motion.div>
         )}
