@@ -1,4 +1,4 @@
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "../Project/ProjectCard";
@@ -6,7 +6,10 @@ import projects from "../../data";
 
 const Projects = () => {
   return (
-    <Container>
+    <Container sx={{ marginTop: "4rem" }}>
+      <Typography variant="h4" textAlign={"center"}>
+        Proyectos
+      </Typography>
       <motion.div
         initial={{ opacity: 0, scale: (0.9, 0.9) }}
         animate={{ opacity: 1, scale: (1, 1) }}
@@ -15,7 +18,7 @@ const Projects = () => {
         <Grid
           container
           spacing={2}
-          marginTop={"4rem"}
+          marginTop={"1rem"}
           sx={{ justifyContent: { xxs: "center", xs: "center", md: "start" } }}
         >
           {projects.map((prj, index) => {
