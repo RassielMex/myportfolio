@@ -7,14 +7,14 @@ import projects from "../../data";
 const Projects = () => {
   return (
     <Container sx={{ marginTop: "4rem" }}>
-      <Typography variant="h4" textAlign={"center"}>
-        Proyectos
-      </Typography>
       <motion.div
         initial={{ opacity: 0, scale: (0.9, 0.9) }}
         animate={{ opacity: 1, scale: (1, 1) }}
         transition={{ duration: 1 }}
       >
+        <Typography variant="h4" textAlign={"center"}>
+          Proyectos
+        </Typography>
         <Grid
           container
           spacing={2}
