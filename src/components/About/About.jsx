@@ -1,4 +1,4 @@
-import { Button, Container, Typography } from "@mui/material";
+import { Button, Container, Link, Typography } from "@mui/material";
 import { Stack } from "@mui/system";
 import DownloadIcon from "@mui/icons-material/Download";
 import React from "react";
@@ -42,7 +42,15 @@ const About = () => {
             color="warning"
             startIcon={<DownloadIcon />}
           >
-            Descargar CV
+            <Link
+              color={"inherit"}
+              target={"_blank"}
+              rel="noopener"
+              href="https://drive.google.com/file/d/1bLXYR7df7EL_AB_Sy3O5ZQATuGRkGQob/view?usp=sharing"
+              underline="none"
+            >
+              Descargar CV
+            </Link>
           </Button>
         </Stack>
       </motion.div>
