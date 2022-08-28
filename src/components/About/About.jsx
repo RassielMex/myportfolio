@@ -37,21 +37,21 @@ const About = () => {
         </Typography>
 
         <Stack alignItems={"center"} marginTop="2rem">
-          <Button
-            variant="contained"
-            color="warning"
-            startIcon={<DownloadIcon />}
+          <Link
+            color={"inherit"}
+            target={"_blank"}
+            rel="noopener"
+            href="https://drive.google.com/file/d/1bLXYR7df7EL_AB_Sy3O5ZQATuGRkGQob/view?usp=sharing"
+            underline="none"
           >
-            <Link
-              color={"inherit"}
-              target={"_blank"}
-              rel="noopener"
-              href="https://drive.google.com/file/d/1bLXYR7df7EL_AB_Sy3O5ZQATuGRkGQob/view?usp=sharing"
-              underline="none"
+            <Button
+              variant="contained"
+              color="warning"
+              startIcon={<DownloadIcon />}
             >
               Descargar CV
-            </Link>
-          </Button>
+            </Button>
+          </Link>
         </Stack>
       </motion.div>
     </Container>
