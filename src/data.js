@@ -6,7 +6,7 @@ const projects = [
   {
     title: "GoScrum",
     description:
-      "Administrador de tareas usando React, React-Boostrap, Formik, Yup. ",
+      "Administrador de tareas usando React, React-Boostrap, Formik, Yup. Usuario: rmexLeader Contraseña:1234",
     screenshot: goScrumImg,
     live: "https://rassielmex.github.io/goScrum/",
     repo: "https://github.com/RassielMex/goScrum",
@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Netlecture",
     description:
-      "Clon de Netflix para reseñas de libros, creado con React, Css, Firebase, Formik",
+      "Clon de Netflix para reseñas de libros, creado con React, Css, Firebase, Formik. Usuario: rhcp94.rm@gmail.com Contraseña: netlecture ",
     screenshot: netLectureImg,
     live: "https://netlecture.netlify.app/",
     repo: "https://github.com/RassielMex/netLecture",
