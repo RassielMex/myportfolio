@@ -1,6 +1,5 @@
 import {
   Drawer,
-  Link,
   List,
   ListItem,
   ListItemButton,
@@ -8,9 +7,10 @@ import {
 } from "@mui/material";
 import React from "react";
 
-import CallIcon from "@mui/icons-material/Call";
+//import CallIcon from "@mui/icons-material/Call";
 import FolderIcon from "@mui/icons-material/Folder";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { Link } from "react-router-dom";
 
 const DrawerNav = ({ openDrawer, onClose }) => {
   return (
@@ -28,12 +28,12 @@ const DrawerNav = ({ openDrawer, onClose }) => {
             <ListItemIcon>
               <AccountCircleIcon />
             </ListItemIcon>
-            <Link underline="none" href="#About" color={"inherit"}>
-              Sobre mí
+            <Link style={{ textDecoration: "none", color: "white" }} to="/">
+              Inicio
             </Link>
           </ListItemButton>
         </ListItem>
-        <ListItem>
+        {/* <ListItem>
           <ListItemButton>
             <ListItemIcon>
               <CallIcon />
@@ -42,13 +42,16 @@ const DrawerNav = ({ openDrawer, onClose }) => {
               Contacto
             </Link>
           </ListItemButton>
-        </ListItem>
+        </ListItem> */}
         <ListItem>
           <ListItemButton>
             <ListItemIcon>
               <FolderIcon />
             </ListItemIcon>
-            <Link underline="none" href="#Projects" color={"inherit"}>
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              to="/Projects"
+            >
               Proyectos
             </Link>
           </ListItemButton>

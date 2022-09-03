@@ -7,11 +7,12 @@ import {
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import CallIcon from "@mui/icons-material/Call";
+//import CallIcon from "@mui/icons-material/Call";
 import FolderIcon from "@mui/icons-material/Folder";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import MenuIcon from "@mui/icons-material/Menu";
 import DrawerNav from "../DrawerNav/DrawerNav";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [openDrawer, setOpenDrawer] = useState(false);
@@ -34,16 +35,17 @@ const Navbar = () => {
             marginX={"1rem"}
             marginY={"0.5rem"}
           >
-            <Chip
-              icon={<AccountCircleIcon />}
-              label="Sobre mí"
-              component="a"
-              href="#About"
-              variant="outlined"
-              clickable
-              color="default"
-            />
-            <Chip
+            <Link to={"/"} style={{ textDecoration: "none" }}>
+              <Chip
+                icon={<AccountCircleIcon />}
+                label="Inicio"
+                component="a"
+                variant="outlined"
+                clickable
+                color="default"
+              />
+            </Link>
+            {/* <Chip
               icon={<CallIcon />}
               label="Contacto"
               component="a"
@@ -51,16 +53,17 @@ const Navbar = () => {
               variant="outlined"
               clickable
               color="default"
-            />
-            <Chip
-              icon={<FolderIcon />}
-              label="Proyectos"
-              component="a"
-              href="#Projects"
-              variant="outlined"
-              clickable
-              color="default"
-            />
+            /> */}
+            <Link to="/Projects" style={{ textDecoration: "none" }}>
+              <Chip
+                icon={<FolderIcon />}
+                label="Proyectos"
+                component="a"
+                variant="outlined"
+                clickable
+                color="default"
+              />
+            </Link>
           </Stack>
         )}
         {isMobile && (
