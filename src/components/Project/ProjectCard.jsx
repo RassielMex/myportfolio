@@ -33,7 +33,7 @@ const ProjectCard = ({ project }) => {
   };
   return (
     <Card
-      style={{ height: 400, maxWidth: 400 }}
+      style={{ height: 425, maxWidth: 425 }}
       onClick={() => {
         hideContent();
       }}
@@ -46,7 +46,7 @@ const ProjectCard = ({ project }) => {
     >
       <motion.div
         layout
-        style={showContent ? { height: 200 } : { height: 400 }}
+        style={showContent ? { height: 200 } : { height: 425 }}
       >
         <CardMedia
           component="img"
@@ -62,7 +62,7 @@ const ProjectCard = ({ project }) => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            <CardContent sx={{ height: 200 }}>
+            <CardContent sx={{ height: 225 }}>
               <Typography gutterBottom variant="h5" component="div">
                 {project?.title}
               </Typography>
@@ -73,6 +73,15 @@ const ProjectCard = ({ project }) => {
               >
                 {project?.description}
               </Typography>
+              {project?.description_optional && (
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  marginBottom={"1rem"}
+                >
+                  {project?.description_optional}
+                </Typography>
+              )}
 
               <Link
                 href={project?.live}

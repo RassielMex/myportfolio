@@ -3,6 +3,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import ProjectCard from "../Project/ProjectCard";
 import projects from "../../data";
+import Contact from "../Contact/Contact";
 
 const Projects = () => {
   return (
@@ -30,6 +31,7 @@ const Projects = () => {
           })}
         </Grid>
       </motion.div>
+      <Contact />
     </Container>
   );
 };

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   AppBar,
-  Avatar,
   Chip,
   IconButton,
   Stack,
@@ -24,13 +23,8 @@ const Navbar = () => {
     setOpenDrawer(!openDrawer);
   };
   return (
-    <AppBar position="static" color="default">
-      <Stack
-        direction={"row"}
-        justifyContent="space-between"
-        alignItems={"center"}
-      >
-        <Avatar sx={{ marginLeft: "2rem" }}>RM</Avatar>
+    <AppBar position="absolute" color="transparent" elevation={0}>
+      <Stack direction={"row"} justifyContent="end" alignItems="center">
         {!isMobile && (
           <Stack
             spacing={2}

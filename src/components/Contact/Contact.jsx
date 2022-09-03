@@ -10,8 +10,8 @@ const Contact = () => {
       justifyContent={"center"}
       spacing={3}
       direction={"row"}
-      marginTop={"3rem"}
-      marginBottom={"1rem"}
+      marginTop={"0.5rem"}
+      marginBottom={"0.5rem"}
     >
       <Link
         target={"_blank"}

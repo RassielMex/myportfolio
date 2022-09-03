@@ -1,10 +1,7 @@
 import { ThemeProvider } from "@emotion/react";
 import { createTheme, CssBaseline } from "@mui/material";
 import "./App.css";
-import About from "./components/About/About";
-import Contact from "./components/Contact/Contact";
-import Navbar from "./components/Navbar/Navbar";
-import Projects from "./components/Projects/Projects";
+import RoutesComponent from "./Routes/RoutesComponent";
 
 function App() {
   const darkTheme = createTheme({
@@ -16,16 +13,7 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
-      <Navbar />
-      <section id="About">
-        <About />
-      </section>
-      <section id="Projects">
-        <Projects />
-      </section>
-      <section id="Contact">
-        <Contact />
-      </section>
+      <RoutesComponent />
     </ThemeProvider>
   );
 }
