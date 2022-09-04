@@ -66,6 +66,7 @@ const ProjectCard = ({ project }) => {
               <Typography gutterBottom variant="h5" component="div">
                 {project?.title}
               </Typography>
+
               <Typography
                 variant="body2"
                 color="text.secondary"
@@ -73,16 +74,15 @@ const ProjectCard = ({ project }) => {
               >
                 {project?.description}
               </Typography>
-              {project?.description_optional && (
+              {project?.accounts && (
                 <Typography
                   variant="body2"
                   color="text.secondary"
                   marginBottom={"1rem"}
                 >
-                  {project?.description_optional}
+                  {project?.accounts}
                 </Typography>
               )}
-
               <Link
                 href={project?.live}
                 target={"_blank"}
@@ -98,7 +98,6 @@ const ProjectCard = ({ project }) => {
                   Ir al sitio
                 </Button>
               </Link>
-
               <Link
                 href={project?.repo}
                 target={"_blank"}
