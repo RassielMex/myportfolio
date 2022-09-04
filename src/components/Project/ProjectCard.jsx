@@ -4,6 +4,7 @@ import {
   CardContent,
   CardMedia,
   Link,
+  Stack,
   Typography,
 } from "@mui/material";
 import React, { useState } from "react";
@@ -63,56 +64,60 @@ const ProjectCard = ({ project }) => {
             exit={{ opacity: 0 }}
           >
             <CardContent sx={{ height: 225 }}>
-              <Typography gutterBottom variant="h5" component="div">
-                {project?.title}
-              </Typography>
+              <Stack height={"100%"} justifyContent="space-between">
+                <Typography gutterBottom variant="h5" component="div">
+                  {project?.title}
+                </Typography>
 
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                marginBottom={"1rem"}
-              >
-                {project?.description}
-              </Typography>
-              {project?.accounts && (
                 <Typography
                   variant="body2"
                   color="text.secondary"
                   marginBottom={"1rem"}
                 >
-                  {project?.accounts}
+                  {project?.description}
                 </Typography>
-              )}
-              <Link
-                href={project?.live}
-                target={"_blank"}
-                rel="noopener"
-                underline="none"
-                sx={{ cursor: "grabbing" }}
-              >
-                <Button
-                  variant="outlined"
-                  sx={{ marginRight: "0.5rem" }}
-                  startIcon={<LinkIcon />}
-                >
-                  Ir al sitio
-                </Button>
-              </Link>
-              <Link
-                href={project?.repo}
-                target={"_blank"}
-                rel="noopener"
-                underline="none"
-                sx={{ cursor: "grabbing" }}
-              >
-                <Button
-                  variant="outlined"
-                  sx={{ marginRight: "0.5rem" }}
-                  startIcon={<WebAssetIcon />}
-                >
-                  Github Repo
-                </Button>
-              </Link>
+                {project?.accounts && (
+                  <Typography
+                    variant="body2"
+                    color="text.secondary"
+                    marginBottom={"1rem"}
+                  >
+                    {project?.accounts}
+                  </Typography>
+                )}
+                <Stack direction={"row"}>
+                  <Link
+                    href={project?.live}
+                    target={"_blank"}
+                    rel="noopener"
+                    underline="none"
+                    sx={{ cursor: "grabbing" }}
+                  >
+                    <Button
+                      variant="outlined"
+                      sx={{ marginRight: "0.5rem" }}
+                      startIcon={<LinkIcon />}
+                    >
+                      Ir al sitio
+                    </Button>
+                  </Link>
+                  <Link
+                    href={project?.repo}
+                    target={"_blank"}
+                    rel="noopener"
+                    underline="none"
+                    sx={{ cursor: "grabbing" }}
+                  >
+                    <Button
+                      variant="outlined"
+                      sx={{ marginRight: "0.5rem" }}
+                      startIcon={<WebAssetIcon />}
+                    >
+                      Github Repo
+                    </Button>
+                  </Link>
+                </Stack>
+              </Stack>
             </CardContent>
           </motion.div>
         )}
