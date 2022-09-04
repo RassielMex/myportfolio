@@ -49,7 +49,7 @@ const About = () => {
               color={"inherit"}
               target={"_blank"}
               rel="noopener"
-              href="https://drive.google.com/file/d/1bLXYR7df7EL_AB_Sy3O5ZQATuGRkGQob/view?usp=sharing"
+              href="https://drive.google.com/file/d/1rwhkpDcYpUukwuTUvGebk8kpt0DeqG3A/view?usp=sharing"
               underline="none"
             >
               <Button
