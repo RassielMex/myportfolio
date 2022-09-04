@@ -4,6 +4,7 @@ import {
   ListItem,
   ListItemButton,
   ListItemIcon,
+  ListItemText,
 } from "@mui/material";
 import React from "react";
 
@@ -14,25 +15,22 @@ import { Link } from "react-router-dom";
 
 const DrawerNav = ({ openDrawer, onClose }) => {
   return (
-    <Drawer
-      id="drawer"
-      open={openDrawer}
-      onClose={() => {
-        onClose();
-      }}
-      anchor={"left"}
-    >
+    <Drawer id="drawer" open={openDrawer} onClose={onClose} anchor={"left"}>
       <List>
-        <ListItem>
-          <ListItemButton>
-            <ListItemIcon>
-              <AccountCircleIcon />
-            </ListItemIcon>
-            <Link style={{ textDecoration: "none", color: "white" }} to="/">
-              Inicio
-            </Link>
-          </ListItemButton>
-        </ListItem>
+        <Link
+          style={{ textDecoration: "none", color: "white" }}
+          to="/"
+          onClick={onClose}
+        >
+          <ListItem>
+            <ListItemButton>
+              <ListItemIcon>
+                <AccountCircleIcon />
+              </ListItemIcon>
+              <ListItemText> Inicio</ListItemText>
+            </ListItemButton>
+          </ListItem>
+        </Link>
         {/* <ListItem>
           <ListItemButton>
             <ListItemIcon>
@@ -43,19 +41,20 @@ const DrawerNav = ({ openDrawer, onClose }) => {
             </Link>
           </ListItemButton>
         </ListItem> */}
-        <ListItem>
-          <ListItemButton>
-            <ListItemIcon>
-              <FolderIcon />
-            </ListItemIcon>
-            <Link
-              style={{ textDecoration: "none", color: "white" }}
-              to="/Projects"
-            >
-              Proyectos
-            </Link>
-          </ListItemButton>
-        </ListItem>
+        <Link
+          style={{ textDecoration: "none", color: "white" }}
+          to="/Projects"
+          onClick={onClose}
+        >
+          <ListItem>
+            <ListItemButton>
+              <ListItemIcon>
+                <FolderIcon />
+              </ListItemIcon>
+              <ListItemText>Proyectos</ListItemText>
+            </ListItemButton>
+          </ListItem>
+        </Link>
       </List>
     </Drawer>
   );
