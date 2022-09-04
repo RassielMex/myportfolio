@@ -39,7 +39,7 @@ const Navbar = () => {
               <Chip
                 icon={<AccountCircleIcon />}
                 label="Inicio"
-                component="a"
+                component="div"
                 variant="outlined"
                 clickable
                 color="default"
@@ -58,7 +58,7 @@ const Navbar = () => {
               <Chip
                 icon={<FolderIcon />}
                 label="Proyectos"
-                component="a"
+                component="div"
                 variant="outlined"
                 clickable
                 color="default"
