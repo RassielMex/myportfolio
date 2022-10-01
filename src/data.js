@@ -35,7 +35,7 @@ const projects = [
     description:
       "Monitoreo de cpu a través de un backend, Front-End usando ChartJs",
     screenshot: cpumonitorImg,
-    live: "http://www.servicecloudlmex.co/",
+    live: "https://www.servicecloudlmex.co/",
     repo: "https://github.com/RassielMex/cputemp",
   },
 ];
