@@ -1,12 +1,12 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import About from "../components/About/About";
 import Projects from "../components/Projects/Projects";
 import MainLayout from "../views/MainLayout";
 
 const RoutesComponent = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<About />} />
@@ -14,7 +14,7 @@ const RoutesComponent = () => {
         </Route>
         <Route path="*" element={<>Pagina no encontrada</>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
