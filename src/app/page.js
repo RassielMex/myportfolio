@@ -1,3 +1,3 @@
-export default function Page() {
-  return <p>Migre a next</p>; // We'll update this
+export default function HomePage() {
+  return <p>Home</p>; // We'll update this
 }
