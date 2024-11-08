@@ -19,21 +19,23 @@ export default function Sidebar() {
 
   const iconSize = 16;
   return (
-    <nav className="w-[320px] md:w-fit md:h-[800px] p-12">
+    <nav className="min-w-[320px] md:w-fit md:h-[800px] p-12 md:border-r md:border-r-slate-500">
       <div className="flex h-full justify-between items-center md:flex-col md:h-fit">
-        <Image
-          className="w-12 h-12 rounded-xl +md:mb-5 md:h-28 md:w-fit lg:h-48 "
-          src="/images/rectangle.png"
-          alt="Imagen de perfil"
-          height={192}
-          width={192}
-        />
-        <button
-          className="rounded-xl text-green_60 bg-green_10 py-1 px-3 text-xs md:py-2 md:mb-10 md:mt-5 
-      "
-        >
-          Disponible
-        </button>
+        <div className="flex gap-x-4 items-center md:flex-col">
+          <Image
+            className="w-12 h-12 rounded-xl +md:mb-5 md:h-28 md:w-fit lg:h-48 "
+            src="/images/rectangle.png"
+            alt="Imagen de perfil"
+            height={192}
+            width={192}
+          />
+          <button
+            className="h-fit rounded-xl text-green_60 bg-green_10 py-1 px-3 text-xs md:py-2 md:mb-10 md:mt-5 
+       md:w-full"
+          >
+            Disponible
+          </button>
+        </div>
         <button
           className="md:hidden"
           onClick={() => {
