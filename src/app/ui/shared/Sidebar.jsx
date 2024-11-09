@@ -82,7 +82,7 @@ export default function Sidebar() {
 const SideNavLink = ({ children, linkName, linkRef }) => {
   return (
     <Link href={linkRef ?? ""} className=" ">
-      <div className="flex gap-x-4 p-3 md:justify-center lg:justify-start hover:bg-dark_10 rounded-md">
+      <div className="flex gap-x-4 p-3 items-center md:justify-center lg:justify-start hover:bg-dark_10 rounded-md">
         {children}
         <p className="md:hidden lg:block">{linkName}</p>
       </div>
