@@ -1,5 +1,6 @@
 import React from "react";
 import CardStack from "../shared/CardStack";
+import LinkButton from "../shared/LinkButton";
 
 export default function StackResume() {
   return (
@@ -26,6 +27,9 @@ export default function StackResume() {
           description={"Animations"}
           imgSrc={"/icons/react.png"}
         />
+      </div>
+      <div className="flex flex-col md:flex-row md:justify-end">
+        <LinkButton href={"/projects"} text={"Ver Stack"} />
       </div>
     </div>
   );
