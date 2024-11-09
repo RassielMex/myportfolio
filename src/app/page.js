@@ -9,6 +9,9 @@ export default function HomePage() {
       <AboutResume />
       <RecentProjects />
       <StackResume />
+      <h1 className="mt-12 text-4xl md:text-6xl lg:text-8xl font-bold">
+        ¡Conectemos!
+      </h1>
     </div>
   );
 }
