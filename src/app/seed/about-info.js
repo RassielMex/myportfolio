@@ -47,11 +47,28 @@ validaciones del lado del cliente usando Yup, Zod y Formik.`,
       certificate: "",
     },
   ],
+  jobs: [
+    {
+      title: "Front End Developer",
+      place: "NO COUNTRY (remoto)",
+      duration: "OCTUBRE 2024 - NOVIEMBRE 2024",
+    },
+    {
+      title: "Proyectista Eléctrico",
+      place: "Sanmartin México, Umán, Yuc.",
+      duration: "JUNIO 2021 - SEPTIEMBRE 2024",
+    },
+    {
+      title: "Front End Developer",
+      place: "Scode_ (remoto)",
+      duration: "MAYO 2022 - FEB 2023",
+    },
+  ],
   languages: [
-    { title: "TOEFL ITP, 553", date: "FEB 2020", certificate: "" },
+    { title: "TOEFL ITP, 553", date: "FEBRERO 2020", certificate: "" },
     {
       title: "EF SET, 71/100 C2 PROFICIENT",
-      date: "AUGUST 2022",
+      date: "AGOSTO 2022",
       certificate: "https://www.efset.org/cert/CoNSBH",
     },
   ],
