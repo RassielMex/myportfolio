@@ -14,7 +14,7 @@ export default function AboutResume() {
       </p>
       <div className="flex flex-col justify-between gap-y-6 md:flex-row ">
         <div className="flex gap-x-2 items-center">
-          <MapPin size={16} />
+          <MapPin size={16} color="#4CE6A6" />
           <span className="text-base font-extralight">Umán, Yucatán, MX</span>
         </div>
         <LinkButton href={"/about"} text={"Más acerca de mí"} />
