@@ -19,7 +19,7 @@ export default function Sidebar() {
 
   const iconSize = 16;
   return (
-    <nav className="min-w-[320px] md:w-fit md:h-[800px] p-12 md:border-r md:border-r-slate-500">
+    <nav className="min-w-[320px] md:w-fit md:h-[800px] p-6 md:p-12 md:border-r md:border-r-slate-500">
       <div className="flex h-full justify-between items-center md:flex-col md:h-fit">
         <div className="flex gap-x-4 items-center md:flex-col">
           <Image
