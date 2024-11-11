@@ -9,6 +9,7 @@ export default function Card({
   stack,
   live,
   repo,
+  features,
 }) {
   return (
     <div className="my-1 ">
@@ -20,6 +21,15 @@ export default function Card({
       <div className="flex justify-start gap-4 flex-wrap mb-6">
         {stack?.map((tech, i) => {
           return <IconTechnology key={i + tech.name} {...tech} />;
+        })}
+      </div>
+      <div className="mb-6 max-w-96">
+        {features?.map((feat, i) => {
+          return (
+            <p key={i + feat.slice(5)} className="font-light italic">
+              - {feat}
+            </p>
+          );
         })}
       </div>
       <div className="flex justify-between mb-4">
