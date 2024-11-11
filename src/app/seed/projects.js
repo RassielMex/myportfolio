@@ -1,3 +1,5 @@
+import { stack, stackIconSource } from "./stack-experience";
+
 const projects = [
   {
     title: "GoScrum",
@@ -8,17 +10,14 @@ const projects = [
       "Creacion de tareas y asignacion por equipo",
       "Filtro por prioridades y estados",
     ],
-    stack: [stack.NEXT, stack.NEST, stack.TAILWIND, stack.TS],
+    stack: [
+      { name: stack.NEXT, iconSrc: stackIconSource.NEXT },
+      { name: stack.NEST, iconSrc: stackIconSource.NEST },
+      { name: stack.TAILWIND, iconSrc: stackIconSource.TAILWIND },
+      { name: stack.TS, iconSrc: stackIconSource.TS },
+    ],
     live: "https://next-goscrum.vercel.app/",
     repo: "https://github.com/RassielMex/next_goscrum",
   },
 ];
 export default projects;
-
-export const stack = {
-  NEXT: "next",
-  NEST: "nest",
-  TS: "typescript",
-  JS: "javascript",
-  TAILWIND: "tailwind",
-};
