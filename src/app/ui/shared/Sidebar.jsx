@@ -24,7 +24,7 @@ export default function Sidebar() {
         <div className="flex gap-x-4 items-center md:flex-col">
           <Image
             className="w-12 h-12 rounded-xl +md:mb-5 md:h-28 md:w-fit lg:h-48 "
-            src="/images/rectangle.png"
+            src="/images/profile.jpg"
             alt="Imagen de perfil"
             height={192}
             width={192}
