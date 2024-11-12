@@ -6,16 +6,18 @@ import { contactFormSchema } from "../../models/contact-form-schema";
 export default function ContactForm() {
   const {
     register,
-    formState: { errors, isSubmitting },
+    formState: { errors, isSubmitting, isSubmitSuccessful },
     handleSubmit,
+    setError,
+    reset,
   } = useForm({ resolver: yupResolver(contactFormSchema) });
 
   const onSubmit = async (data) => {
     try {
       const emailJSData = {
-        service_id: process.env.EMAILJS_SERVICE_ID,
-        template_id: process.env.EMAILJS_TEMPLATE_ID,
-        user_id: process.env.EMAILJS_PUBLIC,
+        service_id: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+        template_id: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+        user_id: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC,
         template_params: { ...data },
       };
 
@@ -28,8 +30,12 @@ export default function ContactForm() {
         }
       );
       console.log(response);
+      if (!response.ok) {
+        throw new Error("Request to EmailJS falló");
+      }
     } catch (error) {
       console.log(error);
+      setError("root", { message: "Ops, su mensaje no pudo enviarse" });
     }
   };
 
@@ -75,10 +81,17 @@ export default function ContactForm() {
       </div>
       <button
         type="submit"
-        className="w-full p-4 rounded-md mb-2 bg-green_60 text-dark_2 "
+        aria-disabled={isSubmitting}
+        className="w-full p-4 rounded-md mb-2 bg-green_60 text-dark_2 aria-disabled:bg-slate-500"
       >
-        ¡Enviar!
+        {isSubmitting ? "Loading" : "¡Enviar!"}
       </button>
+      {isSubmitSuccessful && (
+        <p className="text-green_60 text-center">¡Mensage enviado con éxito!</p>
+      )}
+      {errors?.root && (
+        <p className="text-red-600 text-center">{errors?.root?.message}</p>
+      )}
     </form>
   );
 }
