@@ -13,8 +13,13 @@ export default function Card({
 }) {
   return (
     <div className="my-1 ">
-      <div className="relative w-full min-h-[260px] md:min-h-[160px] lg:min-h-[320px]">
-        <Image src={imgSrc} alt="Card image" fill className="rounded-lg" />
+      <div className="relative w-full min-h-[260px] md:min-h-[160px] lg:min-h-[320px] overflow-clip rounded-lg">
+        <Image
+          src={imgSrc}
+          alt="Card image"
+          fill
+          className="rounded-lg fill transition hover:scale-110"
+        />
       </div>
       <p className="text-green_60 my-4">{title}</p>
       <p className="mb-6">{description}</p>
