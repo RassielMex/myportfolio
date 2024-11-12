@@ -10,6 +10,7 @@ import {
   Github,
   Linkedin,
   Menu,
+  X,
 } from "@geist-ui/icons";
 import Link from "next/link";
 import clsx from "clsx";
@@ -51,7 +52,7 @@ export default function Sidebar() {
             );
           }}
         >
-          <Menu size={iconSize} />
+          {!showItems ? <Menu size={iconSize} /> : <X size={iconSize} />}
         </button>
       </div>
       <div ref={scope}>
