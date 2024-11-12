@@ -1,6 +1,7 @@
 import { Mail, Phone } from "@geist-ui/icons";
 import Image from "next/image";
 import Link from "next/link";
+import ContactForm from "../../ui/contact/contact-form";
 
 export default function ContactPage() {
   return (
@@ -24,31 +25,7 @@ export default function ContactPage() {
           <h3 className="my-8 text-light_90 text-base font-medium">
             Dejame un mensaje
           </h3>
-          <form className="">
-            <fieldset className="gap-x-2 md:flex ">
-              <input
-                id="name"
-                name="name"
-                placeholder="Nombre"
-                className="w-full p-4 rounded-md mb-2 bg-dark_10 text-ligt_60"
-              />
-              <input
-                id="email"
-                name="email"
-                placeholder="Email"
-                className="w-full p-4 rounded-md mb-2 bg-dark_10 text-ligt_60"
-              />
-            </fieldset>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="Mensaje"
-              className="w-full p-4 rounded-md mb-2 bg-dark_10 text-ligt_60 h-48 max-h-48"
-            />
-            <button className="w-full p-4 rounded-md mb-2 bg-green_60 text-dark_2 ">
-              ¡Enviar!
-            </button>
-          </form>
+          <ContactForm />
           <h3 className="my-8 text-light_90 text-base font-medium">
             O un whatsapp!
           </h3>
