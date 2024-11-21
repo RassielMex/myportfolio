@@ -22,7 +22,7 @@ const projects = [
   {
     title: "Fantastic Store",
     description: "Tienda simple para mostrar productos al estilo fashion",
-    imgSrc: "/images/projects/goscrum.jpg",
+    imgSrc: "/images/projects/fantastic.jpg",
     features: [
       "Landing Page",
       "Formulario para suscripción",
