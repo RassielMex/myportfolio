@@ -19,5 +19,23 @@ const projects = [
     live: "https://next-goscrum.vercel.app/",
     repo: "https://github.com/RassielMex/next_goscrum",
   },
+  {
+    title: "Fantastic Store",
+    description: "Tienda simple para mostrar productos al estilo fashion",
+    imgSrc: "/images/projects/goscrum.jpg",
+    features: [
+      "Landing Page",
+      "Formulario para suscripción",
+      "Filtro por categorias y busqueda",
+    ],
+    stack: [
+      { name: stack.NEXT, iconSrc: stackIconSource.NEXT },
+      { name: stack.NEST, iconSrc: stackIconSource.NEST },
+      { name: stack.TAILWIND, iconSrc: stackIconSource.TAILWIND },
+      { name: stack.TS, iconSrc: stackIconSource.TS },
+    ],
+    live: "https://fantastic-store.netlify.app/",
+    repo: "https://github.com/RassielMex/fantastic-store",
+  },
 ];
 export default projects;
